@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0154)https://webcache.googleusercontent.com/search?q=cache:E-I17nrOYsoJ:https://tool.oschina.net/uploads/apidocs/jquery/regexp.html&cd=1&hl=zh-CN&ct=clnk&gl=us -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!--<base href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html">-->
+		<base href="." />
+		<style>
+			body {
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: 0;
+			}
+			#bN015htcoyT__google-cache-hdr {
+				background: #f8f9fa;
+				font: 13px arial, sans-serif;
+				text-align: left;
+				color: #202124;
+				border: 0;
+				margin: 0;
+				border-bottom: 1px solid #dadce0;
+				line-height: 16px;
+				padding: 16px 28px 24px 28px;
+			}
+			#bN015htcoyT__google-cache-hdr * {
+				display: inline;
+				font: inherit;
+				text-align: inherit;
+				color: inherit;
+				line-height: inherit;
+				background: none;
+				border: 0;
+				margin: 0;
+				padding: 0;
+				letter-spacing: 0;
+			}
+			#bN015htcoyT__google-cache-hdr a {
+				text-decoration: none;
+				color: #1a0dab;
+			}
+			#bN015htcoyT__google-cache-hdr a:hover {
+				text-decoration: underline;
+			}
+			#bN015htcoyT__google-cache-hdr a:visited {
+				color: #681da8;
+			}
+			#bN015htcoyT__google-cache-hdr div {
+				display: block;
+				margin-top: 4px;
+			}
+			#bN015htcoyT__google-cache-hdr b {
+				font-weight: bold;
+				display: inline-block;
+				direction: ltr;
+			}
+		</style>
+		<style type="text/css" id="notify-bootstrap">
+			.notifyjs-bootstrap-base {
+				font-weight: bold;
+				padding: 8px 15px 8px 14px;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+				background-color: #fcf8e3;
+				border: 1px solid #fbeed5;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				white-space: nowrap;
+				padding-left: 25px;
+				background-repeat: no-repeat;
+				background-position: 3px 7px;
+			}
+			.notifyjs-bootstrap-error {
+				color: #b94a48;
+				background-color: #f2dede;
+				border-color: #eed3d7;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+			}
+			.notifyjs-bootstrap-success {
+				color: #468847;
+				background-color: #dff0d8;
+				border-color: #d6e9c6;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+			}
+			.notifyjs-bootstrap-info {
+				color: #3a87ad;
+				background-color: #d9edf7;
+				border-color: #bce8f1;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+			}
+			.notifyjs-bootstrap-warn {
+				color: #c09853;
+				background-color: #fcf8e3;
+				border-color: #fbeed5;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+			}
+		</style>
+		<style type="text/css" id="core-notify">
+			.notifyjs-corner {
+				position: fixed;
+				margin: 5px;
+				z-index: 99999;
+			}
+
+			.notifyjs-corner .notifyjs-wrapper,
+			.notifyjs-corner .notifyjs-container {
+				position: relative;
+				display: block;
+				height: inherit;
+				width: inherit;
+				margin: 3px;
+			}
+
+			.notifyjs-wrapper {
+				z-index: 1;
+				position: absolute;
+				display: inline-block;
+				height: 0;
+				width: 0;
+			}
+
+			.notifyjs-container {
+				display: none;
+				z-index: 1;
+				position: absolute;
+			}
+
+			.notifyjs-hidable {
+				cursor: pointer;
+			}
+
+			[data-notify-text],
+			[data-notify-html] {
+				position: relative;
+			}
+
+			.notifyjs-arrow {
+				position: absolute;
+				z-index: 2;
+				width: 0;
+				height: 0;
+			}
+		</style>
+		<style type="text/css" id="b3785e25-a80e-4317-801c-da77783724ba">
+			.d0cc9d40-1187-4a12-a224-ad6432112d15 {
+				position: relative !important;
+				border-radius: 0.2em !important;
+				padding: 0px !important;
+				margin: 0px !important;
+			}
+
+			.d5a6cfd7-a990-4ba2-9e40-752ac9fd7016 .ssh-close {
+				position: absolute;
+				left: -8px;
+				top: -8px;
+				width: 16px;
+				height: 16px;
+				z-index: 999;
+				border: none;
+				background: url("data:image/png;base64,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")
+					no-repeat border-box;
+				animation-duration: 275ms;
+				animation-timing-function: ease-out;
+				box-shadow: none;
+				animation-name: c4a34a3d-5436-48c8-8a81-ffb45c824b08;
+			}
+
+			.d5a6cfd7-a990-4ba2-9e40-752ac9fd7016 .ssh-close:hover,
+			.d5a6cfd7-a990-4ba2-9e40-752ac9fd7016 .ssh-close:focus {
+				background-image: url("data:image/png;base64,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");
+			}
+
+			@media print {
+				.d5a6cfd7-a990-4ba2-9e40-752ac9fd7016 {
+					box-shadow: unset !important;
+					-webkit-print-color-adjust: exact !important;
+				}
+			}
+
+			@keyframes c4a34a3d-5436-48c8-8a81-ffb45c824b08 {
+				0% {
+					opacity: 0;
+					transform: scale(0.6);
+				}
+				100% {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			@keyframes f285683f-6660-428d-ad79-4d0147b02db4 {
+				100% {
+					opacity: 0;
+					transform: scale(0.3);
+				}
+			}
+
+			.d5a6cfd7-a990-4ba2-9e40-752ac9fd7016 {
+				background-color: rgba(238, 238, 238, 0.8);
+				color: rgb(170, 170, 170);
+				font: inherit;
+				box-shadow: rgb(238, 238, 238) 0px 0px 0.35em;
+				text-shadow: none !important;
+			}
+
+			.default-red-aa94e3d5-ab2f-4205-b74e-18ce31c7c0ce {
+				box-shadow: rgb(255, 128, 128) 0px 0px 0.35em;
+				background-color: rgba(255, 128, 128, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-orange-da01945e-1964-4d27-8a6c-3331e1fe7f14 {
+				box-shadow: rgb(255, 210, 170) 0px 0px 0.35em;
+				background-color: rgba(255, 210, 170, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-yellow-aaddcf5c-0e41-4f83-8a64-58c91f7c6250 {
+				box-shadow: rgb(255, 255, 170) 0px 0px 0.35em;
+				background-color: rgba(255, 255, 170, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-green-c4d41e0a-e40f-4c3f-91ad-2d66481614c2 {
+				box-shadow: rgb(170, 255, 170) 0px 0px 0.35em;
+				background-color: rgba(170, 255, 170, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-cyan-f88e8827-e652-4d79-a9d9-f6c8b8ec9e2b {
+				box-shadow: rgb(170, 255, 255) 0px 0px 0.35em;
+				background-color: rgba(170, 255, 255, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-purple-c472dcdb-f2b8-41ab-bb1e-2fb293df172a {
+				box-shadow: rgb(255, 170, 255) 0px 0px 0.35em;
+				background-color: rgba(255, 170, 255, 0.8) !important;
+				color: rgb(0, 0, 0) !important;
+			}
+
+			.default-grey-da7cb902-89c6-46fe-b0e7-d3b35aaf237a {
+				box-shadow: rgb(119, 119, 119) 0px 0px 0.35em;
+				background-color: rgba(119, 119, 119, 0.8) !important;
+				color: rgb(255, 255, 255) !important;
+			}
+		</style>
+	</head>
+	<body data-new-gr-c-s-check-loaded="14.1084.0" data-gr-ext-installed="">
+		<div style="position: relative">
+			<title>正则表达式手册</title>
+			<style type="text/css">
+				html,
+				body {
+					font-family: sans-serif;
+					font-size: 1em;
+				}
+				table.wikitable {
+					background: none repeat scroll 0 0 #f9f9f9;
+					border: 1px solid #aaaaaa;
+					border-collapse: collapse;
+					color: black;
+				}
+				.wikitable th,
+				.wikitable td {
+					border: 1px solid #aaaaaa;
+					padding: 0.2em;
+				}
+				.wikitable th {
+					background: none repeat scroll 0 0 #f2f2f2;
+					text-align: center;
+				}
+				p {
+					line-height: 1.5em;
+					margin: 0.4em 0 0.5em;
+				}
+				h2 {
+					margin: 0;
+					font-weight: normal;
+				}
+			</style>
+
+			<h2>表达式全集</h2>
+			<table class="wikitable">
+				<tbody>
+					<tr>
+						<th width="10%">字符</th>
+						<th width="90%">描述</th>
+					</tr>
+					<tr>
+						<th style="text-align: center">\</th>
+						<td>将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“<code>n</code>”匹配字符“<code>n</code>”。“<code>\n</code>”匹配一个换行符。串行“<code>\\</code>”匹配“<code>\</code>”而“<code>\(</code>”则匹配“<code>(</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">^</th>
+						<td>匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“<code>\n</code>”或“<code>\r</code>”之后的位置。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">$</th>
+						<td>匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“<code>\n</code>”或“<code>\r</code>”之前的位置。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">*</th>
+						<td>匹配前面的子表达式零次或多次。例如，zo*能匹配“<code>z</code>”以及“<code>zoo</code>”。*等价于{0,}。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">+</th>
+						<td>匹配前面的子表达式一次或多次。例如，“<code>zo+</code>”能匹配“<code>zo</code>”以及“<code>zoo</code>”，但不能匹配“<code>z</code>”。+等价于{1,}。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">?</th>
+						<td>匹配前面的子表达式零次或一次。例如，“<code>do(es)?</code>”可以匹配“<code>does</code>”或“<code>does</code>”中的“<code>do</code>”。?等价于{0,1}。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">{<span style="font-family: Times New Roman; font-style: italic">n</span>}</th>
+						<td><span style="font-family: Times New Roman; font-style: italic">n</span>是一个非负整数。匹配确定的<span style="font-family: Times New Roman; font-style: italic">n</span>次。例如，“<code>o{2}</code>”不能匹配“<code>Bob</code>”中的“<code>o</code>”，但是能匹配“<code>food</code>”中的两个o。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">{<span style="font-family: Times New Roman; font-style: italic">n</span>,}</th>
+						<td><span style="font-family: Times New Roman; font-style: italic">n</span>是一个非负整数。至少匹配<span style="font-family: Times New Roman; font-style: italic">n</span>次。例如，“<code>o{2,}</code>”不能匹配“<code>Bob</code>”中的“<code>o</code>”，但能匹配“<code>foooood</code>”中的所有o。“<code>o{1,}</code>”等价于“<code>o+</code>”。“<code>o{0,}</code>”则等价于“<code>o*</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">{<span style="font-family: Times New Roman; font-style: italic">n</span>,<span style="font-family: Times New Roman; font-style: italic">m</span>}</th>
+						<td>
+							<span style="font-family: Times New Roman; font-style: italic">m</span>和<span style="font-family: Times New Roman; font-style: italic">n</span>均为非负整数，其中<span style="font-family: Times New Roman; font-style: italic">n</span>&lt;=<span style="font-family: Times New Roman; font-style: italic">m</span>。最少匹配<span style="font-family: Times New Roman; font-style: italic">n</span>次且最多匹配<span style="font-family: Times New Roman; font-style: italic">m</span
+							>次。例如，“<code>o{1,3}</code>”将匹配“<code>fooooood</code>”中的前三个o。“<code>o{0,1}</code>”等价于“<code>o?</code>”。请注意在逗号和两个数之间不能有空格。
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">?</th>
+						<td>
+							当该字符紧跟在任何一个其他限制符（*,+,?，{<span style="font-family: Times New Roman; font-style: italic">n</span>}，{<span style="font-family: Times New Roman; font-style: italic">n</span>,}，{<span style="font-family: Times New Roman; font-style: italic">n</span>,<span style="font-family: Times New Roman; font-style: italic">m</span
+							>}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“<code>oooo</code>”，“<code>o+?</code>”将匹配单个“<code>o</code>”，而“<code>o+</code>”将匹配所有“<code>o</code>”。
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">.</th>
+						<td>
+							匹配除“<code>\</code><span style="font-family: Times New Roman; font-style: italic"><code>n</code></span
+							>”之外的任何单个字符。要匹配包括“<code>\</code><span style="font-family: Times New Roman; font-style: italic"><code>n</code></span
+							>”在内的任何字符，请使用像“<code>(.|\n)</code>”的模式。
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(pattern)</th>
+						<td>匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“<code>\(</code>”或“<code>\)</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(?:pattern)</th>
+						<td>匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用或字符“<code>(|)</code>”来组合一个模式的各个部分是很有用。例如“<code>industr(?:y|ies)</code>”就是一个比“<code>industry|industries</code>”更简略的表达式。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(?=pattern)</th>
+						<td>正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“<code>Windows(?=95|98|NT|2000)</code>”能匹配“<code>Windows2000</code>”中的“<code>Windows</code>”，但不能匹配“<code>Windows3.1</code>”中的“<code>Windows</code>”。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(?!pattern)</th>
+						<td>正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如“<code>Windows(?!95|98|NT|2000)</code>”能匹配“<code>Windows3.1</code>”中的“<code>Windows</code>”，但不能匹配“<code>Windows2000</code>”中的“<code>Windows</code>”。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(?&lt;=pattern)</th>
+						<td>反向肯定预查，与正向肯定预查类拟，只是方向相反。例如，“<code>(?&lt;=95|98|NT|2000)Windows</code>”能匹配“<code>2000Windows</code>”中的“<code>Windows</code>”，但不能匹配“<code>3.1Windows</code>”中的“<code>Windows</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">(?&lt;!pattern)</th>
+						<td>反向否定预查，与正向否定预查类拟，只是方向相反。例如“<code>(?&lt;!95|98|NT|2000)Windows</code>”能匹配“<code>3.1Windows</code>”中的“<code>Windows</code>”，但不能匹配“<code>2000Windows</code>”中的“<code>Windows</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">x|y</th>
+						<td>匹配x或y。例如，“<code>z|food</code>”能匹配“<code>z</code>”或“<code>food</code>”。“<code>(z|f)ood</code>”则匹配“<code>zood</code>”或“<code>food</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">[xyz]</th>
+						<td>字符集合。匹配所包含的任意一个字符。例如，“<code>[abc]</code>”可以匹配“<code>plain</code>”中的“<code>a</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">[^xyz]</th>
+						<td>负值字符集合。匹配未包含的任意字符。例如，“<code>[^abc]</code>”可以匹配“<code>plain</code>”中的“<code>p</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">[a-z]</th>
+						<td>字符范围。匹配指定范围内的任意字符。例如，“<code>[a-z]</code>”可以匹配“<code>a</code>”到“<code>z</code>”范围内的任意小写字母字符。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">[^a-z]</th>
+						<td>负值字符范围。匹配任何不在指定范围内的任意字符。例如，“<code>[^a-z]</code>”可以匹配任何不在“<code>a</code>”到“<code>z</code>”范围内的任意字符。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\b</th>
+						<td>匹配一个单词边界，也就是指单词和空格间的位置。例如，“<code>er\b</code>”可以匹配“<code>never</code>”中的“<code>er</code>”，但不能匹配“<code>verb</code>”中的“<code>er</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\B</th>
+						<td>匹配非单词边界。“<code>er\B</code>”能匹配“<code>verb</code>”中的“<code>er</code>”，但不能匹配“<code>never</code>”中的“<code>er</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\cx</th>
+						<td>匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“<code>c</code>”字符。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\d</th>
+						<td>匹配一个数字字符。等价于[0-9]。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\D</th>
+						<td>匹配一个非数字字符。等价于[^0-9]。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\f</th>
+						<td>匹配一个换页符。等价于\x0c和\cL。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\n</th>
+						<td>匹配一个换行符。等价于\x0a和\cJ。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\r</th>
+						<td>匹配一个回车符。等价于\x0d和\cM。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\s</th>
+						<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\S</th>
+						<td>匹配任何非空白字符。等价于[^ \f\n\r\t\v]。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\t</th>
+						<td>匹配一个制表符。等价于\x09和\cI。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\v</th>
+						<td>匹配一个垂直制表符。等价于\x0b和\cK。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\w</th>
+						<td>匹配包括下划线的任何单词字符。等价于“<code>[A-Za-z0-9_]</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\W</th>
+						<td>匹配任何非单词字符。等价于“<code>[^A-Za-z0-9_]</code>”。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\x<span style="font-family: Times New Roman; font-style: italic">n</span></th>
+						<td>匹配<span style="font-family: Times New Roman; font-style: italic">n</span>，其中<span style="font-family: Times New Roman; font-style: italic">n</span>为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“<code>\x41</code>”匹配“<code>A</code>”。“<code>\x041</code>”则等价于“<code>\x04&amp;1</code>”。正则表达式中可以使用ASCII编码。.</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\<span style="font-family: Times New Roman; font-style: italic">num</span></th>
+						<td>匹配<span style="font-family: Times New Roman; font-style: italic">num</span>，其中<span style="font-family: Times New Roman; font-style: italic">num</span>是一个正整数。对所获取的匹配的引用。例如，“<code>(.)\1</code>”匹配两个连续的相同字符。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\<span style="font-family: Times New Roman; font-style: italic">n</span></th>
+						<td>
+							标识一个八进制转义值或一个向后引用。如果\<span style="font-family: Times New Roman; font-style: italic">n</span>之前至少<span style="font-family: Times New Roman; font-style: italic">n</span>个获取的子表达式，则<span style="font-family: Times New Roman; font-style: italic">n</span>为向后引用。否则，如果<span style="font-family: Times New Roman; font-style: italic">n</span>为八进制数字（0-7），则<span style="font-family: Times New Roman; font-style: italic">n</span
+							>为一个八进制转义值。
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\<span style="font-family: Times New Roman; font-style: italic">nm</span></th>
+						<td>
+							标识一个八进制转义值或一个向后引用。如果\<span style="font-family: Times New Roman; font-style: italic">nm</span>之前至少有<span style="font-family: Times New Roman; font-style: italic">nm</span>个获得子表达式，则<span style="font-family: Times New Roman; font-style: italic">nm</span>为向后引用。如果\<span style="font-family: Times New Roman; font-style: italic">nm</span>之前至少有<span style="font-family: Times New Roman; font-style: italic">n</span>个获取，则<span
+								style="font-family: Times New Roman; font-style: italic"
+								>n</span
+							>为一个后跟文字<span style="font-family: Times New Roman; font-style: italic">m</span>的向后引用。如果前面的条件都不满足，若<span style="font-family: Times New Roman; font-style: italic">n</span>和<span style="font-family: Times New Roman; font-style: italic">m</span>均为八进制数字（0-7），则\<span style="font-family: Times New Roman; font-style: italic">nm</span>将匹配八进制转义值<span style="font-family: Times New Roman; font-style: italic">nm</span>。
+						</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\<span style="font-family: Times New Roman; font-style: italic">nml</span></th>
+						<td>如果<span style="font-family: Times New Roman; font-style: italic">n</span>为八进制数字（0-3），且<span style="font-family: Times New Roman; font-style: italic">m和l</span>均为八进制数字（0-7），则匹配八进制转义值<span style="font-family: Times New Roman; font-style: italic">nm</span>l。</td>
+					</tr>
+					<tr>
+						<th style="text-align: center">\u<span style="font-family: Times New Roman; font-style: italic">n</span></th>
+						<td>匹配<span style="font-family: Times New Roman; font-style: italic">n</span>，其中<span style="font-family: Times New Roman; font-style: italic">n</span>是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<h2>常用正则表达式</h2>
+			<table class="wikitable" width="100%">
+				<tbody>
+					<tr>
+						<th width="10%">用户名</th>
+						<td width="90%">/^[a-z0-9_-]{3,16}$/</td>
+					</tr>
+					<tr>
+						<th scope="row">密码</th>
+						<td>/^[a-z0-9_-]{6,18}$/</td>
+					</tr>
+					<tr>
+						<th scope="row">十六进制值</th>
+						<td>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/</td>
+					</tr>
+					<tr>
+						<th scope="row">电子邮箱</th>
+						<td>
+							/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/<br />
+							/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">URL</th>
+						<td>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</td>
+					</tr>
+					<tr>
+						<th scope="row">IP 地址</th>
+						<td>/((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/<br />/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</td>
+					</tr>
+					<tr>
+						<th scope="row">HTML 标签</th>
+						<td>/^&lt;([a-z]+)([^&lt;]+)*(?:&gt;(.*)&lt;\/\1&gt;|\s+\/&gt;)$/</td>
+					</tr>
+					<tr>
+						<th scope="row">删除代码\\注释</th>
+						<td>(?&lt;!http:|\S)//.*$</td>
+					</tr>
+					<!--  <tr>
+    <th scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+  </tr>-->
+					<tr>
+						<th scope="row">Unicode编码中的汉字范围</th>
+						<td>/^[\u2E80-\u9FFF]+$/</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="position: static !important"></div>
+		<div id="acs_convert_div" class="acs_div_position_north acs_div_theme_light" style="display: none"></div>
+		<div id="sel-ext-win" class="sel-text-win" style="display: none"></div>
+	</body>
+	<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
